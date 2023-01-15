@@ -1,0 +1,15 @@
+﻿<Application x:Class="BudgetApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BudgetApp"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="PrimaryText" Color="Black"/>
+            <Style x:Key="SubmitButton" TargetType="Button">
+                
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+    
+</Application>
