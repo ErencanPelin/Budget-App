@@ -4,7 +4,6 @@
              xmlns:viewModel="clr-namespace:BudgetApp.MVVM.ViewModel"
              xmlns:view="clr-namespace:BudgetApp.MVVM.View">
     <Application.Resources>
-        <ResourceDictionary>
             <DataTemplate DataType="{x:Type TypeName=viewModel:HomeViewModel}">
                 <view:HomeView/>
             </DataTemplate>
@@ -206,7 +205,6 @@
             <Style x:Key="H2" TargetType="TextBlock">
                 <Setter Property="FontSize" Value="20"/>
             </Style>
-        </ResourceDictionary>
     </Application.Resources>
     
 </Application>

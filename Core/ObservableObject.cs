@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
@@ -10,6 +10,7 @@ namespace BudgetApp.Core
 
         protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
         {
+            Console.WriteLine("changed!");
             PropertyChanged?.Invoke(sender:this, new PropertyChangedEventArgs(propertyName));
         }
     }

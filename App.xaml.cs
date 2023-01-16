@@ -1,4 +1,6 @@
-﻿using BudgetApp.MVVM.ViewModel;
+﻿using BudgetApp.Core;
+using BudgetApp.MVVM.ViewModel;
+using BudgetApp.Service;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -28,6 +30,9 @@ namespace BudgetApp
             services.AddSingleton<MainViewModel>();
             services.AddSingleton<BudgetViewModel>();
             services.AddSingleton<HomeViewModel>();
+            services.AddSingleton<INavigationService, NavigationService>();
+            
+            services.AddSingleton<Func<Type, ViewModel>>(serviceProvider => viewModelType => (ViewModel)serviceProvider.GetRequiredService(viewModelType));
 
             _serviceProvider = services.BuildServiceProvider();
         }

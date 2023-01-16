@@ -3,9 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:BudgetApp.MVVM.View"
+        xmlns:local="clr-namespace:BudgetApp" xmlns:viewmodel="clr-namespace:BudgetApp.MVVM.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
         mc:Ignorable="d"
-        Title="Pillow Budget" Height="450" Width="800"
+        Title="Pillow Budget" Height="720" Width="1200"
         ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
@@ -15,12 +15,10 @@
         <Grid HorizontalAlignment="Stretch" Margin="15, 10">
             <TextBlock Text="Pillow Budget" Style="{StaticResource TitleText}"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                <RadioButton Content="Home" VerticalAlignment="Center" Style="{StaticResource NavigationButton }"/>
-                <RadioButton Content="Budget" VerticalAlignment="Center" Style="{StaticResource NavigationButton}"/>
+                <Button Content="Budget" Command="{Binding Path=NavigateBudgetCommand}"/>
+                <Button Content="Home" Command="{Binding Path=NavigateHomeCommand}"/>
             </StackPanel>
         </Grid>
-        <Border Grid.Row="1" Background="Black">
-            
-        </Border>
+        <ContentControl Grid.Row="1" Content="{Binding Path=NavigationService.CurrentView}"/>
     </Grid>
 </Window>

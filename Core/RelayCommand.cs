@@ -22,6 +22,6 @@ namespace BudgetApp.Core
 
         public bool CanExecute(object parameter) => _canExecute(parameter);
 
-        public void Execute(object parameter) => Execute(parameter);
+        public void Execute(object parameter) => _execute(parameter);
     }
 }

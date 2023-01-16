@@ -23,9 +23,10 @@ namespace BudgetApp.Service
             _viewModelFactory = viewModelFactory;
         }
 
-        public void NavigateTo<T>() where T : ViewModel
+        public void NavigateTo<TViewModel>() where TViewModel : ViewModel
         {
-            throw new System.NotImplementedException();
+            var viewModel = _viewModelFactory.Invoke(typeof(TViewModel));
+            CurrentView = viewModel;
         }
     }
 }
