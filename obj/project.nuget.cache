@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "njVHO+fIig9/qw+uhVvMcZcvfHlJeMgZlFgORbvGSr/cqqIRN2QgBaGeF2oKiQph2rADeIiJ1XCLLqMqPrG/Hg==",
+  "dgSpecHash": "OVDKOJAMGbKtDvWVe9Nem6eyz0iehSEMoDMoD7XxdROH2SFzo+dWqmVUBwQwEfyPlWpL+0IjKXzEMwfvnk7U8A==",
   "success": true,
   "projectFilePath": "C:\\Users\\erenc\\source\\repos\\BudgetApp\\BudgetApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\erenc\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\erenc\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\erenc\source\repos\BudgetApp\App.xaml
-11407045341
+3-235769293
 
-5-1196458608
-194237474483
-MainWindow.xaml;
+15394985567
+196-501280444
+MVVM\View\BudgetView.xaml;MVVM\View\HomeView.xaml;MVVM\View\MainWindow.xaml;
 
-True
+False
 
