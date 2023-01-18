@@ -2,9 +2,9 @@
 
 namespace BudgetApp.MVVM.Model
 {
-    public class Expense
+    public class Income
     {
-        public int ExpenseId { get; set; } //PK
+        public int IncomeId { get; set; } //PK
         public string Name { get; set; }
         public string Description { get; set; }
         public double Amount { get; set; }

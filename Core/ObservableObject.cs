@@ -8,10 +8,7 @@ namespace BudgetApp.Core
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
-        {
-            Console.WriteLine("changed!");
+        protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null) =>
             PropertyChanged?.Invoke(sender:this, new PropertyChangedEventArgs(propertyName));
-        }
     }
 }

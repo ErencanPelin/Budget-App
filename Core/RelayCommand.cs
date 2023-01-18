@@ -5,13 +5,13 @@ namespace BudgetApp.Core
 {
     public class RelayCommand : ICommand
     {
-        private readonly Predicate<object> _canExecute;
         private readonly Action<object> _execute;
+        private readonly Predicate<object> _canExecute;
 
-        public RelayCommand(Predicate<object> canExecute, Action<object> execute)
+        public RelayCommand(Action<object> execute, Predicate<object> canExecute)
         {
-            _canExecute = canExecute;
             _execute = execute;
+            _canExecute = canExecute;
         }
 
         public event EventHandler CanExecuteChanged

@@ -24,8 +24,8 @@ namespace BudgetApp.MVVM.ViewModel
         {
             NavigationService = navigationService;
 
-            NavigateHomeCommand = new RelayCommand(canExecute:o => true, o => { Console.WriteLine("Home"); NavigationService.NavigateTo<HomeViewModel>(); });
-            NavigateBudgetCommand = new RelayCommand(canExecute:o => true, o => { NavigationService.NavigateTo<BudgetViewModel>(); });
+            NavigateHomeCommand = new RelayCommand(o => { Console.WriteLine("Home"); NavigationService.NavigateTo<HomeViewModel>(); }, canExecute: o => true);
+            NavigateBudgetCommand = new RelayCommand(o => { NavigationService.NavigateTo<BudgetViewModel>(); }, canExecute: o => true);
 
             NavigateHomeCommand.Execute(this);
         }
