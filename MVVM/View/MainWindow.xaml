@@ -6,7 +6,15 @@
         xmlns:local="clr-namespace:BudgetApp" xmlns:viewmodel="clr-namespace:BudgetApp.MVVM.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
         mc:Ignorable="d"
         Title="Pillow Budget" Height="720" Width="1200"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        WindowStyle="None">
+    <Window.Resources>
+        <CollectionViewSource x:Key="expenseViewSource"/>
+        <CollectionViewSource x:Key="expenseProductsViewSource" 
+                              Source="{Binding Expenses, Source={StaticResource expenseViewSource}}"/>
+    </Window.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
