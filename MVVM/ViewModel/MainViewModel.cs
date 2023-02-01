@@ -1,4 +1,5 @@
 ﻿using BudgetApp.Core;
+using BudgetApp.Data;
 using BudgetApp.Service;
 using System;
 
@@ -28,6 +29,8 @@ namespace BudgetApp.MVVM.ViewModel
             NavigateBudgetCommand = new RelayCommand(o => { NavigationService.NavigateTo<BudgetViewModel>(); }, canExecute: o => true);
 
             NavigateHomeCommand.Execute(this);
+        
+            DataStore.InitTestData();
         }
     }
 }

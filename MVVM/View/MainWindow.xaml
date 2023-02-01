@@ -8,19 +8,23 @@
         Title="Pillow Budget" Height="720" Width="1200"
         ResizeMode="NoResize"
         AllowsTransparency="True"
-        WindowStyle="None">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid HorizontalAlignment="Stretch" Margin="15, 10">
-            <TextBlock Text="Pillow Budget" Style="{StaticResource TitleText}"/>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                <Button Content="Budget" Command="{Binding Path=NavigateBudgetCommand}"/>
-                <Button Content="Home" Command="{Binding Path=NavigateHomeCommand}"/>
-            </StackPanel>
+        WindowStyle="None" 
+        Background="Transparent">
+    <Border CornerRadius="20" 
+            Background="White">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid HorizontalAlignment="Stretch" Margin="15, 10">
+                <TextBlock Text="Pillow Budget" Style="{StaticResource TitleText}"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                    <RadioButton Content="Home" IsChecked="True" Command="{Binding Path=NavigateHomeCommand}"/>
+                    <RadioButton Content="Budget" Command="{Binding Path=NavigateBudgetCommand}"/>
+                </StackPanel>
+            </Grid>
+            <ContentControl Grid.Row="1" Content="{Binding Path=NavigationService.CurrentView}"/>
         </Grid>
-        <ContentControl Grid.Row="1" Content="{Binding Path=NavigationService.CurrentView}"/>
-    </Grid>
+    </Border>
 </Window>
