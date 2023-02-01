@@ -11,20 +11,30 @@
         WindowStyle="None" 
         Background="Transparent">
     <Border CornerRadius="20" 
-            Background="White">
+            Background="{StaticResource Primary}">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="80"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Grid HorizontalAlignment="Stretch" Margin="15, 10">
-                <TextBlock Text="Pillow Budget" Style="{StaticResource TitleText}"/>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                    <RadioButton Content="Home" IsChecked="True" Command="{Binding Path=NavigateHomeCommand}"/>
-                    <RadioButton Content="Budget" Command="{Binding Path=NavigateBudgetCommand}"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid HorizontalAlignment="Stretch" Margin="15, 10" Grid.ColumnSpan="2">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+                    <Button Content="_" Style="{StaticResource WindowButton}"/>
+                    <Button Content="O" Style="{StaticResource WindowButton}"/>
+                    <Button Content="X" Style="{StaticResource WindowButton}"/>
                 </StackPanel>
+                <TextBlock Text="Pillow Budget" Style="{StaticResource TitleText}" VerticalAlignment="Center"/>
+                
             </Grid>
-            <ContentControl Grid.Row="1" Content="{Binding Path=NavigationService.CurrentView}"/>
+            <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                <Button Content="Home" Command="{Binding Path=NavigateHomeCommand}" Style="{StaticResource NavigationButton}"/>
+                <Button Content="Budget" Command="{Binding Path=NavigateBudgetCommand}" Style="{StaticResource NavigationButton}"/>
+            </StackPanel>
+            <ContentControl Grid.Row="1" Grid.Column="1" Content="{Binding Path=NavigationService.CurrentView}"/>
         </Grid>
     </Border>
 </Window>
